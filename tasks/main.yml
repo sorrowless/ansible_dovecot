@@ -27,10 +27,22 @@
   notify:
     - Restart Dovecot
 
+- name: Create group for managing mailboxes
+  group:
+    name: vmail
+    gid: 5000
+
+- name: Create user for managing mailboxes
+  user:
+    name: vmail
+    uid: 5000
+    group: vmail
+    shell: '/bin/false'
+
 - name: Set proper mailboxes permissions
   file:
     path: /var/mail
     state: directory
     recurse: yes
-    owner: root
-    group: mail
+    owner: vmail
+    group: vmail
