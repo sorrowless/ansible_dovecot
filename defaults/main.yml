@@ -1,0 +1,13 @@
+# It is an example vars file for mail playbook
+---
+mail_domain: example.ru
+mail_hostname: mail.example.ru
+mail_ssl_enabled: true
+mysql_bind_address: "127.0.0.1"
+postfix_db_name: postfix
+postfix_db_user: postfix
+postfix_db_password: postfixpassword
+mx_hosts:
+  - mail.example.ru
+  - smtp.example.ru
+  - imap.example.ru
