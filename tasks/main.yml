@@ -2,7 +2,7 @@
 - name: Install dovecot packages
   package:
     name: "{{ item }}"
-    state: latest
+    state: present
   with_items:
     - dovecot-core
     - dovecot-imapd
