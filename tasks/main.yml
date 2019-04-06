@@ -8,6 +8,8 @@
     - dovecot-imapd
     - dovecot-pop3d
     - dovecot-mysql
+    - dovecot-sieve
+    - dovecot-managesieved
 
 - name: Copy configuration files
   template:
